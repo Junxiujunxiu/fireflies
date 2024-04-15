@@ -1,0 +1,119 @@
+# Changelog for Final Project
+ 
+Student: Junxiu Wu, ID# 22164260
+ 
+## 2023-05-14
+
+- Looked at assignment brief. 
+- planned the concept for the project.
+- Borke down the whole process into many small parts. 
+- wrote down the formula for the 3D dimention effect. 
+- wrote down all the elements that i need to animate the project.
+- downloaded the background image for the project.
+- downloaded the image for the mouse cursor
+
+
+## 2023-05-15
+
+### Added
+
+-Global variable "backgroundImage" that stores the background image.
+-Global variable "customCursor" that stores the image for the custom mouse cursor.
+-Global variable "numFireflies" that stores the number of fireflies in the simulation.
+-Global variable "x" that stores the x-coordinate of the fireflies' positions.
+-Global variable "y" that stores the y-coordinate of the fireflies' positions.
+-Global variable "z" that stores the z-coordinate of the fireflies' positions.
+-Global variable "vx" that stores the x-component of the fireflies' velocities.
+-Global variable "vy" that stores the y-component of the fireflies' velocities.
+-Global variable "vz" that stores the z-component of the fireflies' velocities.
+-Global variable "fireflyColors" that stores the colors of the fireflies.
+-Global variable "radius" that stores the radius of the fireflies.
+-Global variable "maxVel" that stores the maximum velocity of the fireflies.
+-Global variable "minVel" that stores the minimum velocity of the fireflies.
+-Global variable "leftEye" that represents the left eye object from the Eye class.
+-Global variable "rightEye" that represents the right eye object from the Eye class.
+
+
+## 2023-05-16
+
+- created canvas window with setup() function.
+- Assigned values to the global variables.
+- Implemented fireflies' positions, velocities, and colors.
+- Added background image and custom mouse cursor.
+- Implemented sound playback using the Minim library.
+
+### Added
+- setup() function that initializes the canvas size and other settings.
+- JOptionPane dialog to prompt the user to input the number of fireflies.
+- minim object for sound playback.
+- player object to load and loop the background sound.
+- backgroundImage variable that stores the loaded background image.
+- customCursor variable that stores the loaded custom mouse cursor image.
+- Loop to initialize the fireflies' positions, velocities, and colors based on the user input.
+- lights() and noStroke() functions for rendering.
+- Displaying the background image using image() function.
+- Displaying the custom mouse cursor using cursor() function.
+- Sound playback using player.loop().
+
+## 2023-05-17
+
+### Added
+
+- Comments to explain the purpose and functionality of the code sections.
+- Clarified the purpose and behavior of the fireflies, background, and mouse cursor in the program.
+- Comments to explain the usage and parameters of the Eye class.
+- Comments to explain the purpose and functionality of the update() and draw() methods.
+
+## 2023-05-18
+
+### Added
+
+- A new class Eye to represent a wild animal eye with various features.
+- Variables to store the position, size, colors, iris, and pupil properties of the eye.
+- A constructor to initialize the eye object with the provided parameters.
+- An update() method to update the state of the eye based on the mouse position.
+- Code to calculate the offset for the iris based on the mouse position.
+- Code to gradually adjust the iris offset towards the target offset using a smoothing factor.
+- Code to calculate the position of the pupil based on the iris offset.
+- Code to smooth the pupil position using interpolation.
+
+## 2023-05-19
+
+### Added
+
+- A draw() method to render the eye on the screen.
+- Code to draw the white part of the eye using an ellipse with the provided outer color.
+- Code to draw the black part of the eye using an ellipse with the provided inner color.
+
+
+## 2023-05-20
+
+- Implemented the resizing of the background image to fit the canvas size.
+- Added the custom mouse cursor image and positioned it at the current mouse coordinates.
+- Updated the eye objects by calling the update() and draw() methods.
+- Hid the default mouse cursor.
+- Calculated the distance between the mouse cursor and the fireflies in 3D space.
+- Normalized the direction vector from the fireflies to the mouse cursor.
+- Applied a scaled force to the velocity vector of each firefly based on the direction.
+- Updated the position of each firefly based on its new velocity vector.
+
+
+### Added
+
+- Added the rendering of fireflies using the sphere() function.
+
+- Added the logic to Check if fireflies went outside the screen and reset their position and velocity accordingly.
+
+## 2023-05-21
+
+-Scale the direction vector by a constant force, determining the force to be applied to each firefly.
+-Apply the calculated force to the velocity vector of each firefly.
+-Update the velocity of each firefly by adding the force components.
+
+### Added
+
+- A new function mousePressed() to handle the mouse button press event.
+- The calculation for the position of the mouse cursor relative to the center of the screen.
+- The calculation for the direction vector from each firefly to the mouse cursor.
+- normalization for the direction vector, converting it into a unit vector.
+- The calculation for the distance between each firefly and the mouse cursor using the Euclidean distance formula.
